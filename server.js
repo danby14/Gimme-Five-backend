@@ -26,7 +26,6 @@ app.use(cors());
 const randomRoute = require('./routes/random');
 
 //Route Middlewares
-// app.use('/user', authRoute);
 app.use('/random', randomRoute);
 app.use('/test', (req, res) => {
   res.send('got to test 1');
