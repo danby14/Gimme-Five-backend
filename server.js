@@ -3,7 +3,7 @@ const app = express();
 require('dotenv/config');
 const cors = require('cors');
 const { headlines, randWords, test2 } = require('./cron/cron');
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // cron jobs
 headlines;
