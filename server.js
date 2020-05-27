@@ -33,7 +33,7 @@ app.use('/test', (req, res) => {
 
 //ROUTES
 app.get('/', (req, res) => {
-  res.send('we are on home');
+  res.send('we are on home, gimme five');
 });
 
 //Where we listen for server
