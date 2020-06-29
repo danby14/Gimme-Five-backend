@@ -16,7 +16,7 @@ router.get('/get/all', async (req, res) => {
 router.get('/get/page/:id', async (req, res) => {
   const { id } = req.params;
   const list = await db('lists')
-    .select('id', 'title', 'creator_id')
+    .select('id', 'title', 'creator_id', 'created_at')
     .orderBy('id', 'desc')
     .paginate({ perPage: 10, currentPage: id, isLengthAware: true });
   res.status(200).json(list);
@@ -85,7 +85,8 @@ router.post('/post/user/:id', async (req, res) => {
 router.delete('/remove/:listId', async (req, res) => {
   let { listId } = req.params;
   listId = Number(listId);
-  // const { userId } = req.body;
+  const { userId } = req.body;
+  console.log(userId);
 
   const removed = await db('lists').where('id', listId).del();
 
