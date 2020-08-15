@@ -4,6 +4,7 @@ const sendRefreshToken = (res, token) => {
     httpOnly: true,
     path: '/refresh_token',
     sameSite: 'none',
+    secure: true,
   });
 };
 
