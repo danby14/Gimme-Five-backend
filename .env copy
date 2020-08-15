@@ -4,3 +4,4 @@ DB_URL = postrges connection info for development
 DATABASE_URL = postgres connection info for production
 ACCESS_TOKEN_SECRET = PickAToken
 REFRESH_TOKEN_SECRET = PickASecondToken
+CORS_ORIGIN = http://localhost:3000
