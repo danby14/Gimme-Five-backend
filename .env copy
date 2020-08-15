@@ -1,5 +1,6 @@
 NEWS_API_KEY = get a key from newsApi
 WORDNIK_API_KEY = get a key from wordnik
-DB_URL = postrges connection info
+DB_URL = postrges connection info for development
+DATABASE_URL = postgres connection info for production
 ACCESS_TOKEN_SECRET = PickAToken
 REFRESH_TOKEN_SECRET = PickASecondToken
