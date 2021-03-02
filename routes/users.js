@@ -65,7 +65,12 @@ router.post('/login', async (req, res) => {
 
 //Logout
 router.get('/logout', async (req, res) => {
-  res.clearCookie('gfrt', { path: '/refresh_token' });
+  res.clearCookie('gfrt', {
+    httpOnly: true,
+    path: '/refresh_token',
+    sameSite: 'none',
+    secure: true,
+  });
   res.status(201).json('logged out');
 });
 
